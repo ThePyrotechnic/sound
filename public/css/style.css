@@ -74,17 +74,12 @@ html {
 .box {
   background: #3c3f41;
   border: 1px solid #555555;
-  min-width: 256px;
-  min-height: 256px;
-  max-width: 512px;
-  max-height: 512px;
+  width: 256px;
+  height: 256px;
+  flex-grow: 0;
 }
 
 .box-column {
-  margin-top: 28px;
-}
-
-.box-column > .box:not(:first-child) {
   margin-top: 28px;
 }
 
@@ -116,6 +111,13 @@ html {
 
 .space-around {
   justify-content: space-around;
+}
+
+.main-box-test {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 /* FLEX END */
