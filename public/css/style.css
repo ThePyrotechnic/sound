@@ -51,6 +51,7 @@ html {
   overflow-y: auto;
   overflow-x: hidden;
   max-height: 128px;
+  max-width: 256px;
   text-align: left;
 }
 
@@ -86,6 +87,10 @@ html {
 
 .box-column > .box:not(:first-child) {
   margin-top: 28px;
+}
+
+.box-column > .box:last-child {
+  margin-bottom: 28px;
 }
 
 /* CONTAINER END */
