@@ -1,0 +1,161 @@
+$colorBackground: #2b2b2b
+$colorForeground: #3c3f41
+$colorForegroundLight: #515658
+$colorForegroundDark: #313335
+$colorFont: #bbb
+$colorFontDark: #606366
+$colorBar: $colorForeground
+$colorAccent: #555555
+$colorAccentDark: #393a3c
+
+$colorBoxBackground: $colorForeground
+$colorBoxBackgroundLight: #45494a
+
+body
+  margin: 0 auto
+  background: $colorForegroundDark
+  min-height: 100vh
+  border-right: 1px solid $colorAccentDark
+  border-left: 1px solid $colorAccentDark
+  text-align: center
+
+html
+  background: $colorBackground
+  touch-action: pan-y
+  -ms-touch-action: pan-y
+  min-height: 100vh
+
+/* PROPERTIES */
+.spaced
+  margin: 28px
+
+.padded
+  padding: 14px 16px
+
+.padded-slim
+  padding: 7px 8px
+/* PROPERTIES END */
+
+/* ELEMENT */
+.bar-element
+  color: $colorFont
+  background: $colorAccent
+  display: inline-block
+  text-align: center
+.search
+  background: $colorForegroundDark url(/icon/search.svg) no-repeat 9px center
+  color: $colorFont
+  border: none
+  border-bottom: 1px solid $colorAccent
+  padding: 6px 6px 6px 42px
+
+.code
+  background: $colorBackground
+  color: $colorFont
+  font-family: Monospaced, monospace
+  overflow-y: auto
+  overflow-x: hidden
+  max-height: 128px
+  text-align: left
+
+.title
+  color: $colorFont
+  background: $colorForegroundLight
+  border-bottom: 1px solid $colorAccent
+  font-family: "Segoe UI", sans-serif
+  flex-grow: 0
+  align-self: flex-start
+/* END ELEMENT */
+
+/* CONTAINER */
+.bar
+  background: $colorBar
+  border-bottom: 1px solid $colorAccent
+  font-family: "Segoe UI", sans-serif
+
+.box
+  background: $colorBoxBackground
+  border: 1px solid $colorAccent
+  min-width: 256px
+  min-height: 256px
+  max-width: 512px
+  max-height: 512px
+
+.box-column
+  margin-top: 28px
+
+.box-column > .box:not(:first-child)
+  margin-top: 28px
+/* CONTAINER END */
+
+/* FLEX */
+.center
+  justify-content: center
+  align-items: center
+
+.flex-column
+  display: flex
+  flex-flow: column wrap
+
+.flex-row
+  display: flex
+  flex-flow: row wrap
+
+.flex-grid
+  display: inline-flex
+  flex-flow: row wrap
+
+.space-between
+  justify-content: space-between
+
+.space-around
+  justify-content: space-around
+/* FLEX END */
+
+/* SCREEN SIZE */
+@media (min-width: 320px)
+  /* smartphones, iPhone, portrait 480x320 phones */
+  .is_mobile_device
+    display: block
+
+  .mobile-hidden
+    display: none
+
+  .bar
+    justify-content: center
+
+  .search
+    width: 60%
+
+  body
+    width: 100vw
+
+@media (min-width: 481px)
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+@media (min-width: 641px)
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .is_mobile_device
+    display: none
+
+  .mobile-hidden
+    display: unset
+
+  .bar
+    justify-content: space-between
+
+  .search
+    width: 30%
+
+  body
+    width: 80vw
+
+@media (min-width: 961px)
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+@media (min-width: 1025px)
+  /* big landscape tablets, laptops, and desktops */
+
+@media (min-width: 1281px)
+  /* hi-res laptops and desktops */
+/* END SCREEN SIZE */
