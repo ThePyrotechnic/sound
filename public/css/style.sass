@@ -55,8 +55,8 @@ html
   font-family: Monospaced, monospace
   overflow-y: auto
   overflow-x: hidden
-  max-height: 128px
-  max-width: 256px
+  height: 64px
+  max-width: 100%
   text-align: left
 
 .title
@@ -77,10 +77,7 @@ html
 .box
   background: $colorBoxBackground
   border: 1px solid $colorAccent
-  min-width: 256px
-  min-height: 256px
-  max-width: 512px
-  max-height: 512px
+  height: 256px
 
 .box-column
   margin-top: 28px
@@ -125,6 +122,9 @@ html
   .mobile-hidden
     display: none
 
+  .box
+    width: 90vw
+
   .bar
     justify-content: center
 
@@ -144,6 +144,9 @@ html
 
   .mobile-hidden
     display: unset
+
+  .box
+    width: 512px
 
   .bar
     justify-content: space-between
